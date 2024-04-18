@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <title>SuperHero 🦸‍♂️</title>
+
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="w-full bg-slate-900 py-4">
+      <div class="container-global flex items-center">
+        <img src="./assets/img/favicon.ico" class="rounded-lg" alt="logo" />
+        <p class="text-white text-2xl font-medium pl-2">SuperHero</p>
+      </div>
+    </nav>
+    <div class="max-w-2xl mx-auto px-4" id="hero-form-id">
+      <img
+        src="./assets/img/sh1.jpg"
+        alt="super hero image"
+        class="my-4 rounded-md"
+      />
+      <h2 class="text-4xl">Encuentra tu SuperHero</h2>
+      <form>
+        <label for="superhero-id"
+          >Ingresa el número del SuperHero a buscar</label
+        >
+        <input
+          type="number"
+          class="w-full border border-gray-300 rounded-lg p-2"
+          id="superhero-id"
+        />
+        <button
+          class="bg-slate-900 text-white rounded-lg p-2 mt-2"
+          id="search-superhero"
+        >
+          Buscar
+        </button>
+      </form>
+    </div>
+    <div class="hidden" id="modal-loading-id">
+      <div
+        class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      >
+        <div class="rounded-lg">
+          <img
+            src="./assets/img/loading.gif"
+            class="rounded-full w-52 h-52"
+            alt="loading gif"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container-global hidden" id="hero-card-id">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+        <!-- Imagen del héroe -->
+        <div class="flex justify-center md:justify-start">
+          <img
+            src="https://www.superherodb.com/pictures2/portraits/10/100/835.jpg"
+            alt=""
+            id="hero-image-id"
+            class="max-w-full h-auto p-2 bg-black rounded-lg shadow-lg"
+          />
+        </div>
+
+        <!-- Datos del héroe -->
+        <div class="hero-data">
+          <!-- // Data del héroe -->
+
+          <h2 class="text-2xl py-2">
+            <span class="font-semibold">Nombre:</span>
+            <span id="hero-name-id"></span>
+          </h2>
+          <p class="text-lg py-2">
+            <span class="font-semibold">Conexiones:</span>
+            <span id="group-affiliation-id"></span>
+          </p>
+          <p class="text-lg py-2 md:ml-6">
+            <span class="font-semibold">Publicado por:</span>
+            <span id="publisher-id"></span>
+          </p>
+          <hr />
+          <p class="text-lg py-2 md:ml-6">
+            <span class="font-semibold">Ocupación:</span>
+            <span id="occupation-id"></span>
+          </p>
+          <hr />
+          <p class="text-lg py-2 md:ml-6">
+            <span class="font-semibold">Primera aparición:</span>
+            <span id="first-appearance-id"></span>
+          </p>
+          <hr />
+          <p class="text-lg py-2 md:ml-6">
+            <span class="font-semibold">Altura:</span>
+            <span id="height-id"></span>
+          </p>
+          <hr />
+          <p class="text-lg py-2 md:ml-6">
+            <span class="font-semibold">Peso:</span>
+            <span id="weight-id"></span>
+          </p>
+          <hr />
+          <p class="text-lg py-2 md:ml-6">
+            <span class="font-semibold">Alias:</span>
+            <span id="alliases-id"></span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Estadísticas del héroe -->
+      <div class="hidden" id="chart-hero-id">
+        <div
+          id="chartContainer"
+          style="
+            height: 500px;
+            width: 100%;
+            margin-top: 8rem;
+            margin-bottom: 8rem;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <button
+      class="hidden bg-slate-900 text-white rounded-lg p-2 mt-2 fixed bottom-4 right-4 z-50"
+      id="search-reset-id"
+    >
+      Otro!
+    </button>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script type="module" src="./assets/js/scripts.js"></script>
+  </body>
+</html>
